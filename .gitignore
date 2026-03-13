@@ -2,7 +2,6 @@
 __pycache__/
 *.py[codz]
 *$py.class
-*.md
 
 # C extensions
 *.so
@@ -32,6 +31,7 @@ MANIFEST
 #  before PyInstaller builds the exe, so as to inject date/other infos into it.
 *.manifest
 *.spec
+timeline2kml.spec
 
 # Installer logs
 pip-log.txt
