@@ -1,5 +1,6 @@
 # timeline2kml
 將 Google Maps Timeline 匯出的 `.json` 轉成 `.kml`，方便匯入 Google My Maps 或 Google Earth。
+
 因 Google Timeline 不再直接提供 `.kml` 匯出，此 Tool 可以協助把的旅行、通勤或生活軌跡保留下來，繪製成自己的地圖。
 
 ## 用途
