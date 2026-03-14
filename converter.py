@@ -1,6 +1,5 @@
 import json
 from pathlib import Path
-
 import simplekml
 
 
@@ -42,6 +41,7 @@ def convert_timeline_to_kml(input_path: str, output_path: str):
     }
 
     for segment in data.get("semanticSegments", []):
+        # ---- Visit ----
         if "visit" in segment:
             visit = segment.get("visit", {})
             top_candidate = visit.get("topCandidate", {})
@@ -63,6 +63,7 @@ def convert_timeline_to_kml(input_path: str, output_path: str):
                     }
                 )
 
+        # ---- Activity Record ----
         if "activityRecord" in segment:
             act = segment.get("activityRecord", {})
             activities = act.get("probableActivities", [])
@@ -81,6 +82,7 @@ def convert_timeline_to_kml(input_path: str, output_path: str):
                     }
                 )
 
+        # ---- Timeline Path ----
         if "timelinePath" in segment:
             coords = []
             for point in segment.get("timelinePath", []):
@@ -131,4 +133,6 @@ def convert_timeline_to_kml(input_path: str, output_path: str):
             )
 
     destination_path.parent.mkdir(parents=True, exist_ok=True)
+    
+    # Save KML
     kml.save(str(destination_path))
