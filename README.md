@@ -1,7 +1,96 @@
 # timeline2kml
+
+Convert Google Maps Timeline JSON exports into KML files for visualization in Google Earth or Google My Maps.
+
+---
+
+## Features
+
+* Convert Google Timeline JSON → KML
+* Extract visit locations and movement paths
+* Provide both CLI and desktop GUI
+* Works offline (no data upload)
+
+---
+
+## Installation
+
+```bash
+git clone https://github.com/Bikerbyte/timeline2kml.git
+cd timeline2kml
+pip install -r requirements.txt
+```
+
+---
+
+## Usage
+
+### GUI
+
+```bash
+python gui.py
+```
+
+1. Select `timeline.json`
+2. Choose output `.kml`
+3. Click Convert
+
+---
+
+### CLI
+
+```bash
+python cli.py --input timeline.json --output output.kml
+```
+
+---
+
+### Executable (Currently Windows only.)
+
+Run:
+
+```
+timeline2kml.exe
+```
+
+---
+
+## Input
+
+* Export Google Timeline on mobile phone. 
+* Google Map Web don't support Timeline export anymore.
+
+---
+
+## Output
+
+The generated KML file can be opened with:
+
+* Google Earth
+* Google My Maps
+
+---
+
+## Project Structure
+
+```
+timeline2kml/
+├─ converter.py
+├─ cli.py
+├─ gui.py
+├─ sample/
+├─ requirements.txt
+└─ README.md
+```
+
+---
+
+## 中文說明
+
+# timeline2kml
 將 Google Maps Timeline 匯出的 `.json` 轉成 `.kml`，方便匯入 Google My Maps 或 Google Earth。
 
-因 Google Timeline 不再直接提供 `.kml` 匯出，此 Tool 可以協助把的旅行、通勤或生活軌跡保留下來，繪製成自己的地圖。
+因網頁 Google Timeline 不再直接提供 `.kml` 匯出，此 Tool 可以協助把的旅行、通勤或生活軌跡保留下來，繪製成自己的地圖。
 
 ## 用途
 - 整理旅行移動路線
