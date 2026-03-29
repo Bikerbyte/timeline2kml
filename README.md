@@ -47,7 +47,7 @@ python cli.py --input timeline.json --output output.kml
 
 ### Executable (Currently Windows only.)
 
-Run:
+Download `timeline2kml.exe` from the GitHub Releases page, then run:
 
 ```
 timeline2kml.exe
@@ -99,7 +99,7 @@ timeline2kml/
 - 保存自己的 Timeline 紀錄
 
 ## 使用方式
-請執行 timeline2kml.exe
+請先到 GitHub Releases 頁面下載 `timeline2kml.exe`。
 1. 透過手機上輸出 Google Json 紀錄檔案
 2. 請執行 timeline2kml.exe
 3. 選擇 Timeline JSON
